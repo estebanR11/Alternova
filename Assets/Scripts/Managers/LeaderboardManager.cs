@@ -50,7 +50,7 @@ public class LeaderboardManager : MonoBehaviour
 
     public void LoadLeaderboardData()
     {
-        string filePath = Path.Combine(Application.dataPath, "leaderboard.json");
+        string filePath = Path.Combine(Application.dataPath, "Resources/leaderboard.json");
         if (File.Exists(filePath))
         {
             string json = File.ReadAllText(filePath);
@@ -64,7 +64,7 @@ public class LeaderboardManager : MonoBehaviour
 
     private void SaveLeaderboardData()
     {
-        string filePath = Path.Combine(Application.dataPath, "leaderboard.json");
+        string filePath = Path.Combine(Application.dataPath, "Resources/leaderboard.json");
         LeaderboardData data = new LeaderboardData
         {
             entries = leaderboardEntries
